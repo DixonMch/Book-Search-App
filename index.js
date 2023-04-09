@@ -20,7 +20,7 @@ function searchBooks(query) {
       bookList.innerHTML = "";
       data.items.forEach((item) => {
         const book = document.createElement("li");
-        const bookLink = document.createElement("a");
+        /*const bookLink = document.createElement("a");*/
         const bookImage = document.createElement("img");
 
         bookLink.href = "#";
@@ -41,3 +41,19 @@ function searchBooks(query) {
     })
     .catch((error) => console.log(error));
 }
+
+// Display book details
+function displayBookDetails(bookData) {
+    bookTitle.textContent = bookData.volumeInfo.title;
+    bookAuthor.textContent = `By ${bookData.volumeInfo.authors}`;
+    bookPublisher.textContent = `Published by ${bookData.volumeInfo.publisher}`;
+    bookPublishedDate.textContent = `Published on ${bookData.volumeInfo.publishedDate}`;
+    bookDescription.textContent = bookData.volumeInfo.description || "No description available.";
+    bookCover.innerHTML = `<img src="${bookData.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/128x192.png?text=No+Cover'}">`;
+  
+    if (bookData.volumeInfo.averageRating) {
+      bookReviews.textContent = `Average rating: ${bookData.volumeInfo.averageRating} (${bookData.volumeInfo.ratingsCount} reviews)`;
+    } else {
+      bookReviews.textContent = "No reviews available.";
+    }
+  }
