@@ -60,6 +60,11 @@ function displayBookDetails(bookData) {
     bookPublishedDate.textContent = `Published on ${bookData.volumeInfo.publishedDate}`;
     bookDescription.textContent = bookData.volumeInfo.description || "No description available.";
     bookCover.innerHTML = `<img src="${bookData.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/128x192.png?text=No+Cover'}">`;
+    
+    // create clear button element
+  const clearButton = document.createElement("button");
+  clearButton.textContent = "Clear";
+  clearButton.addEventListener("click", clearBookDetails);
   
     if (bookData.volumeInfo.averageRating) {
       bookReviews.textContent = `Average rating: ${bookData.volumeInfo.averageRating} (${bookData.volumeInfo.ratingsCount} reviews)`;

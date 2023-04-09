@@ -1,6 +1,6 @@
 #book-details {
     border: 2px solid black;
-    background-color: #fff;
+    background-color: #696767;
 }
 
 /* To make footer stay fixed at the bottom*/
@@ -135,7 +135,7 @@ header form {
   
   #book-cover {
     width: 100%;
-    height: 400px;
+    height: 200px;
     background-color: #eee;
     background-size: contain;
     background-repeat: no-repeat;
