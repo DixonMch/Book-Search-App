@@ -28,22 +28,25 @@ function searchBooks(query) {
           displayBookDetails(item);
         });
 
+        book.addEventListener("mouseover", () => {
+            book.style.transform = "scale(1.1)";
+          });
+  
+          book.addEventListener("mouseout", () => {
+            book.style.transform = "scale(1)";
+          });
+  
         if (item.volumeInfo.imageLinks) {
           bookImage.src = item.volumeInfo.imageLinks.thumbnail;
         } else {
           bookImage.src = "https://via.placeholder.com/128x192.png?text=No+Cover";
         }
 
-        bookImage.addEventListener("mouseenter", enlargeBookCover);
-        bookImage.addEventListener("mouseleave", resetBookCover);
-        bookImage.addEventListener("focus", enlargeBookCover);
-        bookImage.addEventListener("blur", resetBookCover);
-
         bookLink.appendChild(bookImage);
         book.appendChild(bookLink);
         bookList.appendChild(book);
 
-       
+        
       });
     })
     .catch((error) => console.log(error));
@@ -72,10 +75,4 @@ document.querySelector("form").addEventListener("submit", (event) => {
     searchBooks(query);
     event.target.reset(); // Reset the form input to an empty string
   });
-  function enlargeBookCover() {
-  bookCover.firstChild.style.transform = "scale(1.2)";
-}
-function resetBookCover() {
-    bookCover.firstChild.style.transform = "none";
-  }
   
