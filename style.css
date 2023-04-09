@@ -62,4 +62,12 @@ footer {
     border-radius: 0.25rem;
     border: none;
   }
-  
+  header button[type="submit"] {
+    background-color: #ef476f;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+  }
