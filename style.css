@@ -1,11 +1,6 @@
-#book-results {
-    border: 2px solid black;
-}
-#book-list {
-    border: 2px solid black;
-}
 #book-details {
     border: 2px solid black;
+    background-color: #fff;
 }
 
 /* To make footer stay fixed at the bottom*/
@@ -24,7 +19,7 @@ body {
 }
 
 h2 {
-  color: #fff;
+  color: #f1eaea;
 }
 
 header {
@@ -43,14 +38,14 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: auto;
-  }
-  header h1 {
+}
+header h1 {
     margin: 0;
-  }
+}
   
-  header form {
-    display: flex;
-  }
+header form {
+   display: flex;
+}
   
   header label {
     margin-right: 0.5rem;
@@ -81,10 +76,13 @@ footer {
   
   #book-results {
     width: 100%;
+    background-color: antiquewhite;
   }
   
   #book-results h2 {
     margin-top: 0;
+    color: black;
+   
   }
   #book-list {
     list-style: none;
@@ -127,6 +125,7 @@ footer {
   /* Book details styles */
   #book-details {
     width: calc(50% - 1rem);
+    
   }
   
   #book-details h2 {
