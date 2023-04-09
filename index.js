@@ -29,7 +29,7 @@ function searchBooks(query) {
         });
 
         book.addEventListener("mouseover", () => {
-            book.style.transform = "scale(1.1)";
+            book.style.transform = "scale(1.5)";
           });
   
           book.addEventListener("mouseout", () => {
