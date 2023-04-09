@@ -7,9 +7,7 @@
 #book-details {
     border: 2px solid black;
 }
-footer {
-    border: 2px solid black;
-}
+
 /* To make footer stay fixed at the bottom*/
 html {
     height: 100%;
@@ -46,3 +44,22 @@ footer {
     align-items: center;
     margin-top: auto;
   }
+  header h1 {
+    margin: 0;
+  }
+  
+  header form {
+    display: flex;
+  }
+  
+  header label {
+    margin-right: 0.5rem;
+  }
+  
+  header input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+  }
+  
