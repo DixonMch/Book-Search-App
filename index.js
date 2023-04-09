@@ -7,6 +7,7 @@ const bookPublishedDate = document.getElementById("book-published-date");
 const bookDescription = document.getElementById("book-description");
 const bookReviews = document.getElementById("book-reviews");
 const bookCover = document.getElementById("book-cover");
+const clearButton = document.getElementById("clearButton");
 
 const API_URL = "https://www.googleapis.com/books/v1/volumes";
 
@@ -51,6 +52,15 @@ function searchBooks(query) {
     })
     .catch((error) => console.log(error));
 }
+clearButton.addEventListener("click", () => {
+  bookTitle.textContent = "";
+  bookAuthor.textContent = "";
+  bookPublisher.textContent = "";
+  bookPublishedDate.textContent = "";
+  bookDescription.textContent = "";
+  bookReviews.textContent = "";
+  bookCover.innerHTML = "";
+});
 
 // Display book details
 function displayBookDetails(bookData) {
@@ -61,11 +71,6 @@ function displayBookDetails(bookData) {
     bookDescription.textContent = bookData.volumeInfo.description || "No description available.";
     bookCover.innerHTML = `<img src="${bookData.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/128x192.png?text=No+Cover'}">`;
     
-    // create clear button element
-  const clearButton = document.createElement("button");
-  clearButton.textContent = "Clear";
-  clearButton.addEventListener("click", clearBookDetails);
-  
     if (bookData.volumeInfo.averageRating) {
       bookReviews.textContent = `Average rating: ${bookData.volumeInfo.averageRating} (${bookData.volumeInfo.ratingsCount} reviews)`;
     } else {
