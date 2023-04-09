@@ -176,7 +176,60 @@ header form {
   #clearButton:hover {
     background-color: red;
   }
+  /* For screens smaller than 768px */
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
   
+  header form {
+    margin-top: 1rem;
+  }
+  
+  header input[type="text"] {
+    width: 100%;
+  }
+  
+  main {
+    margin-top: 2rem;
+  }
+  
+  #book-details {
+    width: 100%;
+  }
+}
+
+/* For screens between 768px and 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    margin: 1rem auto;
+    max-width: 768px;
+  }
+  
+  #book-details {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+/* For screens larger than 1023px */
+@media (min-width: 1024px) {
+  header {
+    justify-content: flex-end;
+  }
+  
+  main {
+    max-width: 1024px;
+    margin: 2rem auto;
+  }
+  
+  #book-details {
+    width: calc(33.33% - 1rem);
+    margin-top: 0;
+  }
+}
+
 
 
  
