@@ -57,3 +57,12 @@ function displayBookDetails(bookData) {
       bookReviews.textContent = "No reviews available.";
     }
   }
+
+// Listen for form submit event
+document.querySelector("form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const query = searchInput.value;
+    searchBooks(query);
+    event.target.reset(); // Reset the form input to an empty string
+  });
+  
