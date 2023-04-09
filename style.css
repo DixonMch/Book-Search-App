@@ -216,7 +216,7 @@ header form {
 /* For screens larger than 1023px */
 @media (min-width: 1024px) {
   header {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
   
   main {
