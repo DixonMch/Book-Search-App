@@ -1,5 +1,5 @@
 # Book-Search-App
-Project Name: Book-Search-App
+Project Name: Book Search App
 Author: Dixon Mogaka
 
 Description
@@ -22,10 +22,14 @@ The displayBookDetails function is called when a user clicks on a book from the 
 
 Finally, the program adds an event listener to the HTML form element using the querySelector method, which selects the first element in the document that matches a CSS selector. The event listener listens for the submit event, which is triggered when the user submits the search form. When the event is triggered, the listener prevents the default form submission behavior, gets the user's search query from the searchInput element, calls the searchBooks function with the query, and resets the form input to an empty string using the reset method of the event target.
 
-Project Setup Instructions
-Clone the repository to your local machine using git clone https://github.com/DixonMch/Book-Search-App.git
-Open the index.html file in a web browser.
-To search for a book, enter a keyword in the search box and click the "Search" button.
+Project Setup Instructions:
+    1. Open a terminal or command prompt on your local machine.
+    2. Navigate to the directory where you want to clone the repository using the "cd" command.
+    3. Type "git clone https://github.com/DixonMch/Book-Search-App.git" to clone the repository to your local machine.
+    4. Once the repository is cloned, navigate to the project directory of the project using "cd phase-1-final-project" command.
+    5. Open the "index.html" file in a web browser to view the Book Search App.
+    6. To search for a book, enter a keyword in the search box and click the "Search" button.
+
 
 Live Site
 You can view the live site here, https://dixonmch.github.io/Book-Search-App/.
